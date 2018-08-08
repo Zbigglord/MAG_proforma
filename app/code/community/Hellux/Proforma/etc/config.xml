@@ -1,0 +1,44 @@
+<config>
+    <modules>
+        <Hellux_Proforma>
+            <version>0.1.0</version>
+        </Hellux_Proforma>
+    </modules>	
+	<admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <proforma before="Mage_Adminhtml">Hellux_Proforma_Adminhtml</proforma>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+   <adminhtml>
+		<layout>
+		   <updates>
+				<proforma>
+					 <file>hellux/proforma/proforma.xml</file>
+				 </proforma>
+			</updates>
+		</layout>		
+    </adminhtml> 
+ <global>
+  <models>
+   <proforma>
+    <class>Hellux_Proforma_Model</class>
+   </proforma>
+  </models>
+  <blocks>
+   <proforma>
+    <class>Hellux_Proforma_Block</class>
+   </proforma>
+  </blocks>
+  <helpers>
+   <proforma>
+    <class>Hellux_Proforma_Helper</class>
+   </proforma>
+  </helpers>  
+ </global>
+</config>
